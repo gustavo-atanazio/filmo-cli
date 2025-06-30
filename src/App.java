@@ -41,6 +41,10 @@ public class App {
           break;
 
         case "2":
+          for (int i = 0; i < catalog.size(); i++) {
+            System.out.println(i + 1 + ". " + catalog.get(i).toString());
+          }
+
           break;
 
         case "3":
