@@ -52,6 +52,7 @@ public class App {
           break;
       
         default:
+          System.out.println("Escolha uma opção válida.");
           continue;
       }
     }
