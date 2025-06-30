@@ -1,4 +1,9 @@
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+
+import models.CatalogItem;
+import models.Movie;
 
 public class App {
   public static void main(String[] args) throws Exception {
@@ -9,6 +14,7 @@ public class App {
     3. Sair
     """;
     Scanner scanner = new Scanner(System.in);
+    List<CatalogItem> catalog = new ArrayList<>();
 
     System.out.println("Bem-vindo ao Filmo!");
 
@@ -20,6 +26,18 @@ public class App {
 
       switch (choose) {
         case "1":
+          System.out.println("Digite o nome do filme:");
+          String name = scanner.nextLine();
+
+          System.out.println("Digite o ano de lançamento:");
+          String releaseYearInput = scanner.nextLine();
+          short releaseYear = Short.parseShort(releaseYearInput);
+
+          Movie movie = new Movie(name, releaseYear);
+          catalog.add(movie);
+
+
+          System.out.println("Filme cadastrado com sucesso!");
           break;
 
         case "2":
