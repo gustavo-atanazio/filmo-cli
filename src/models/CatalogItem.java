@@ -18,4 +18,9 @@ public class CatalogItem {
 
   public String getSynopsis() { return synopsis; }
   public void setSynopsis(String synopsis) { this.synopsis = synopsis; }
+
+  @Override
+  public String toString() {
+    return "Nome: " + name + ", ano de lançamento: " + releaseYear;
+  }
 }
